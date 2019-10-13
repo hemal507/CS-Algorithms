@@ -8,4 +8,5 @@ def higherVersion(v1, v2):
                         return True
         return False
 
-
+def higherVersion(v1, v2):
+        return map(int, v1.split('.')) > map(int, v2.split('.'))
