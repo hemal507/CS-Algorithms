@@ -35,3 +35,7 @@ def fib2(n) :
                 return 1
         else :
                 return fib2(n-1) + fib2(n-2)
+
+# using list comprehension
+from functools import reduce
+print(list(reduce(lambda x,_ : x + [ x[-1] + x[-2] ] , range(98), [0,1])))
