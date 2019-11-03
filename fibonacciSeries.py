@@ -27,3 +27,11 @@ def fib(n) :
         fib_cache[n] = value
         return value
 
+# using lru_cache Python3
+from functools import lru_cache
+@lru_cache(maxsize = 1000)
+def fib2(n) :
+        if n==1 or n== 2 :
+                return 1
+        else :
+                return fib2(n-1) + fib2(n-2)
