@@ -16,7 +16,7 @@ def test_case5():
         assert increaseNumberRoundness.increaseNumberRoundness(106611) == True
 
 def test_case6():
-        assert increaseNumberRoundness.increaseNumberRoundness(234230) == True
+        assert increaseNumberRoundness.increaseNumberRoundness(234230) == False
 
 def test_case7():
         assert increaseNumberRoundness.increaseNumberRoundness(888) == False
@@ -26,3 +26,6 @@ def test_case8():
 
 def test_case9():
         assert increaseNumberRoundness.increaseNumberRoundness(1000000) == False
+
+def test_case10():
+        assert increaseNumberRoundness.increaseNumberRoundness(234230) == False
