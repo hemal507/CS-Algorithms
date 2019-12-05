@@ -1,4 +1,3 @@
-'''
 def isPower(n):
     if n == 1:
         return True
@@ -12,11 +11,8 @@ def isPower(n):
                 return True
             n = tmp
     return False
-'''
+
 
 def isPower(n) :
 	r=range(n) 
 	return [True for x in r for y in r if x**y == n ] > [ ]
-
-print(isPower(72))
-print(isPower(100))
