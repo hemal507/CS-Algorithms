@@ -5,9 +5,11 @@ def insertDashes(s) :
 			r += '-'+s[i+1]
 		elif s[i] == ' ' :
 			r += s[i] + s[i+1]
-		print(r)
-
 	return ''.join(r)
 
+
+import re
+def insertDashes(s) :
+        return re.sub('\B','-',s)
 
 print(insertDashes('wel come'))
