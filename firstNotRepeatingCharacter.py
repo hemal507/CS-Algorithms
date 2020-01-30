@@ -1,4 +1,4 @@
-'''
+"""
 from collections import OrderedDict
 def firstNotRepeatingCharacter(s):
     d=OrderedDict()
@@ -9,6 +9,15 @@ def firstNotRepeatingCharacter(s):
         if v == 1 :
             return k
     return '_'    
-'''
-def firstNotRepeatingCharacter(s) :
-    return ([x for x in s if s.index(x) == s.rindex(x) ] + ['_'])[0]
+
+
+def firstNotRepeatingCharacter(s):
+    return ([x for x in s if s.index(x) == s.rindex(x)] + ['_'])[0]
+"""
+
+
+def firstNotRepeatingCharacter(s):
+    for x in s:
+        if s.find(x) == s.rfind(x):
+            return x
+    return '_'
