@@ -1,3 +1,4 @@
+"""
 def ballsRearranging(balls):
     m = min(balls)
     x = max(balls)
@@ -10,3 +11,13 @@ def ballsRearranging(balls):
             c = n
             m = l - n
     return m
+"""
+
+def ballsRearranging(balls):
+    s = sorted(balls)
+    i = 0
+    for a in s:
+        i += a - s[i] >= len(s)
+    return i
+
+print(ballsRearranging([6, 4, 1, 7, 10]))
