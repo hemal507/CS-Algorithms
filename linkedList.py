@@ -24,6 +24,27 @@ class linked_list():
         print(items)
 
 
+    def length(self):
+        l = 0
+        curr_node = self.head
+        while curr_node.next != None:
+            l += 1
+            curr_node = curr_node.next
+        return l
+
+    def insert_at_index(self, data, position):
+        """ considering linked list elements start position # 0 """
+        new_node = node(data)
+        curr_node = self.head
+        i = 0
+        while i < position:
+            curr_node = curr_node.next
+            i += 1
+        new_node.next = curr_node.next
+        curr_node.next = new_node
+
+
+
 if __name__ == '__main__':
     ll = linked_list()
     ll.print_elements()
@@ -33,3 +54,4 @@ if __name__ == '__main__':
     ll.append(90)
     ll.append(5)
     ll.print_elements()
+    print(ll.length())
