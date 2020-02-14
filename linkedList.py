@@ -64,7 +64,17 @@ class linked_list():
             i += 1
         return curr_node.data
 
-
+    def delete_at_index(self, position):
+        if position >= self.length():
+            print('Linked likst length is less than the requested position; No action is taken')
+            return None
+        curr_node = self.head
+        i = 0
+        while i < position:
+            curr_node = curr_node.next
+            i += 1
+        print('element to be deleted is ', curr_node.data)
+        curr_node.next = curr_node.next.next
 
 
 if __name__ == '__main__':
@@ -83,3 +93,5 @@ if __name__ == '__main__':
     ll.append(14)
     ll.print_elements()
     print(ll.get_element_at_index(5))
+    ll.delete_at_index(4)
+    ll.print_elements()
