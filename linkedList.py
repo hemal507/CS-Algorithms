@@ -53,6 +53,19 @@ class linked_list():
         new_node.next = curr_node.next
         curr_node.next = new_node
 
+    def get_element_at_index(self, position):
+        if position >= self.length():
+            print('Linked list length is less than the requested position; No action is taken')
+            return None
+        curr_node = self.head
+        i = 0
+        while i <= position:
+            curr_node = curr_node.next
+            i += 1
+        return curr_node.data
+
+
+
 
 if __name__ == '__main__':
     ll = linked_list()
@@ -69,3 +82,4 @@ if __name__ == '__main__':
     ll.append(12)
     ll.append(14)
     ll.print_elements()
+    print(ll.get_element_at_index(5))
