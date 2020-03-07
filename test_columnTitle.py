@@ -32,5 +32,4 @@ def test_case8():
 
 
 def test_case9():
-    assert columnTitle.columnTitle(13) == 'M'
-
+    assert columnTitle.columnTitle(13) =='M'
