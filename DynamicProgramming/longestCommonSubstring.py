@@ -23,7 +23,7 @@ def longestCommonSubstring(s, t):
             m += 1
     return m
 
-def longestCommonSubsctringDP(a, b) :
+def longestCommonSubstringDP(a, b) :
     x = len(a)
     y = len(b)
     lcs = [ [None for i in range(y+1)] for j in range(x+1) ]
@@ -38,4 +38,4 @@ def longestCommonSubsctringDP(a, b) :
     return lcs[x][y]
 
 
-print(longestCommonSubsctringDP("ABCDGH", "ACDGHR"))
+print(longestCommonSubstringDP("ABCDGH", "ACDGHR"))
