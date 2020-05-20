@@ -1,4 +1,4 @@
-import longestCommonSubstring
+from DynamicProgramming import longestCommonSubstring
 
 
 def test_case1():

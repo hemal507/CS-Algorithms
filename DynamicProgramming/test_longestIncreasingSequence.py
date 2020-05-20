@@ -1,4 +1,4 @@
-import longestIncreasingSequence
+from DynamicProgramming import longestIncreasingSequence
 
 
 def test_case1():
